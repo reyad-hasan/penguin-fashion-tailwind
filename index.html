@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penguin-fashion-Tailwind</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+
+    <header>
+        <!-- Responsive style 768 px -->
+        <nav>
+            <h1 href="#" class="logo">Penguin <span>Fashion</span></h1>
+            <div>
+                <input type="checkbox" id="sidebar-active">
+                <label for="sidebar-active" class="open-sidebar-btn">
+                    <!-- <i class="fa-solid fa-bars"></i> -->
+                    <div class="hambar-box">
+                        <div class="hambar-menu"></div>
+                        <div class="hambar-menu"></div>
+                        <div class="hambar-menu"></div>
+                    </div>
+                </label>
+
+                <label id="overly" for="sidebar-active"></label>
+
+                <div class="links-container">
+                    <label for="sidebar-active" class="close-sidebar-btn">
+                        <div class="hambar-close"></div>
+                    </label>
+                    <a href="#" class="link active">Home</a>
+                    <a href="#" class="link">Services</a>
+                    <a href="#" class="link">Contact</a>
+                    <a href="#" class="link">About</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Responsive style 768 px -->
+    </header>
+
+    <main>
+        <h1>Tailwind new Project</h1>
+    </main>
+
+    <footer>
+
+    </footer>
+
 </body>
+
 </html>

@@ -1,0 +1,146 @@
+:root{
+    --primary-color: #A4BC46 ;
+    --secondary-color: #363958;
+}
+
+
+/* header section style start */
+
+.hambar-box {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.hambar-box .hambar-menu {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--secondary-color);
+    border-radius: 0.5rem;
+}
+
+.hambar-close {
+    width: 2rem;
+    height: 0.25rem;
+    cursor: pointer;
+}
+
+.hambar-close:before,
+.hambar-close:after {
+    position: absolute;
+    content: ' ';
+    width: 2rem;
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color);
+}
+
+.hambar-close:before {
+    transform: rotate(45deg);
+}
+
+.hambar-close:after {
+    transform: rotate(-45deg);
+}
+
+nav {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav .logo {
+    margin-right: auto;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+nav .logo span {
+    color: var(--secondary-color);
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav .link {
+    border-radius: 1.5rem;
+    padding: .7rem 1.6rem;
+    transition: 0.3s;
+    color: var(--secondary-color);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.active {
+    background-color: var(--primary-color);
+}
+
+nav .link:hover {
+    background-color: var(--primary-color);
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-btn,
+.close-sidebar-btn {
+    display: none;
+}
+
+
+/* responsive style start from here */
+@media screen and (max-width: 768px) {
+
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 80%;
+        background-color: gray;
+        transition: .5s ease-out;
+    }
+
+    nav .link {
+        height: auto;
+        width: 100%;
+        padding: 1.25rem 2rem;
+        border-radius: 0;
+    }
+
+    .open-sidebar-btn,
+    .close-sidebar-btn {
+        display: block;
+    }
+
+    .close-sidebar-btn {
+        padding: 2rem;
+    }
+
+    #sidebar-active:checked~.links-container {
+        right: 0;
+    }
+
+    #sidebar-active:checked~#overly {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+}
